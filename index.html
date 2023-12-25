@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Advanced PIN code input with Alpine.js</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="flex flex-col w-full h-full">
+  <p class="text-sm text-center text-gray-500 w-60 mx-auto">PIN code entry input with arrow navigation, pasting anywhere, allowing only numbers, automatic focus on input, custom length & checking for correct PIN.<br>by <a href="https://github.com/rehhouari" class="text-gray-900">@rehhouari</a></p>
+  <div x-data="pincode()" class="flex flex-col w-68 h-60 bg-gray-100 text-gray-900 text-center mx-auto rounded mt-2">
+    <p class="font-semibold">Enter PIN Code</p>
+    <div>
+      <template x-for="i in length">
+        <input type="text" :name="'pin'+i" maxlength="1"
+               class="bg-white py-5 text-4xl unselectable font-bold rounded inline w-12 text-center select-none transition-all"
+               @paste.prevent="paste(event)"
+               @keydown="type(event,i)"
+               @keydown.ctrl.a.prevent
+               @mousemove.prevent.stop
+               @keydown.arrow-right.prevent="goto(i+1)"
+               @keydown.arrow-left.prevent="goto(i-1)"
+               :value="input[i-1]!=null?input[i-1]:0" 
+                :x-ref="'pin'+i" placeholder="0"
+               :disabled="input.length < i-1"
+               :autofocus="i==1">
+      </template>
+      <div>
+        <p class="text-md font-bold  text-gray-500 h-5" id="feedback"></p>
+        <p class="text-xs mt-2 text-gray-500"><span class="font-bold">1234</span> is the correct PIN.<br>you can try copy pasting that directly!</p>
+      </div>
+    </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js'></script>
+<script src='https://unpkg.com/windicss-runtime-dom'></script><script  src="./script.js"></script>
+
+</body>
+</html>
