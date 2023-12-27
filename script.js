@@ -60,7 +60,7 @@ function pincode() {
       if (this.input.join("") == this.correctPin) {
         feedback.innerHTML = "Correct!";
       } else {
-        feedback.innerHTML = "Wrong!";
+        feedback.innerHTML = "Wrong password!";
       }
     }
   };

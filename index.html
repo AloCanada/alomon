@@ -8,9 +8,17 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div>
-  <p>m ei viitsi seda ära parandada aga pmst siia tulevad kõik erinevad lingid</p>
+<div class="flex flex-col w-full h-full">
+  <div x-data="links()"   class="flex flex-col w-68 h-60 bg-gray-100 text-gray-900 text-center justify-center items-center mx-auto rounded mt-2">
+      <p class="font-semibold">INSTAGRAM</p>
+      <button
+             class=" bg-white py-5 text-4xl 
+             unselectable font-bold rounded 
+             inline w-50 text-center 
+             select-none transition-all">
+  </div>
 </div>
+<!-- P I N   K O O D -->
 <div class="flex flex-col w-full h-full"> <!-- Koodi kast -->
   <div x-data="pincode()" class="flex flex-col w-68 h-60 bg-gray-100 text-gray-900 text-center mx-auto rounded mt-2">
     <p class="font-semibold">Enter PIN Code</p>
