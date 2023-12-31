@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+version="1.1" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:svgjs="http://svgjs.dev/svgjs" 
+viewBox="0 0 100 100" 
+width="700px" 
+height="700px" 
+opacity="1">
+    <defs>
+        <filter 
+            id="nnnoise-filter" 
+            x="-20%" y="-20%" 
+            width="140%" 
+            height="140%" 
+            filterUnits="objectBoundingBox" 
+            primitiveUnits="userSpaceOnUse" 
+            color-interpolation-filters="linearRGB">
+            <feTurbulence 
+                type="fractalNoise" 
+                baseFrequency="0.65" 
+                numOctaves="4" 
+                seed="15" 
+                titchTiles="stitch" 
+                x="0%" 
+                y="0%" 
+                width="700px" 
+                height="700px" 
+                result="turbulence"/>
+            <feSpecularLighting 
+                surfaceScale="14" 
+                specularConstant="1.9" 
+                specularExponent="20" 
+                lighting-color="#095000" 
+                x="0%" 
+                y="0%" 
+                width="100%" 
+                height="100%" 
+                in="turbulence" 
+                result="specularLighting">
+                <feDistantLight 
+                    azimuth="3" 
+                    elevation="147">
+                </feDistantLight>
+            </feSpecularLighting>
+
+        </filter>
+    </defs>
+    <rect width="100vw" height="100vh" fill="070708"></rect>
+    <rect width="100vw" height="100vh" fill="#095000" filter="url(#nnnoise-filter)"></rect>
+</svg>

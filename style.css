@@ -1,12 +1,93 @@
+body {
+  margin: 0px;
+  background-image: url(/index2/green.svg);
+/*     background-color: black;
+*//*     cover: no-repeat; */
+  width: 100vw;
+  height: 100vh;
+}
+
+/* #noiseFilter {} */
+
+.poster {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  position: absolute;
+  /* filter: url(#noiseFilter); */
+/*     width: 1920px;
+  height: 969px; */
+}
+#pixel {
+  filter: blur(300px);
+  z-index: -2;
+  top: 0px;
+  right: 0px;
+  position: relative;
+}
+#no-pixel {
+  z-index: -1;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+
+}
+.nublu {
+  float: right;
+  margin-top: 6rem;
+  margin-right: 6rem;
+  margin-bottom: 6rem;
+  margin-left: auto;
+  height: calc(100vh - 12rem);
+  object-fit: contain;
+  border-radius: 46px;
+  object-position: 17% 17%; 
+}
+.nublu-crop {
+/*     float: right;
+*/    margin: 1.5rem;
+  height: calc(100vh - 3rem);
+  width: calc(100vw - 3rem);
+  object-fit: cover;
+  border-radius: 46px;
+  object-position: 17% 17%; 
+}
+.text-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.text {
+  color: #F11B7E;
+  font-family: Jockey One; 
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 3px;
+  margin: auto 1rem;
+}
+
+#dotline{
+  overflow: hidden;
+}
+
+
+
+
 .unselectable {
    -moz-user-select: -moz-none;
    -khtml-user-select: none;
    -webkit-user-select: none;
 
-   /*
-     Introduced in IE 10.
-     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-   */
+   
+     /* Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/ */
+  
    -ms-user-select: none;
    user-select: none;
 }

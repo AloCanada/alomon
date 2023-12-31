@@ -1,3 +1,33 @@
+function checkAndChangeClass() {
+  if (window.innerHeight > window.innerWidth) {
+      // Call the changeClass function if the condition is true
+      changeClass();
+  } else {
+      // Remove the class if the condition is not true
+      document.body.classList.remove('wide');
+  }
+}
+
+// Call the function initially
+checkAndChangeClass();
+
+
+/* if (window.innerHeight > window.innerWidth) {
+  changeClass();
+} */
+
+function changeClass() {
+  var element = document.querySelector("#no-pixel");
+  element.classList.replace("nublu", "nublu-crop");
+}
+function changeClassBack() {
+  var element = document.querySelector("#no-pixel");
+  element.classList.replace("nublu-crop", "nublu");
+}
+
+
+/* pin kooooood */
+
 function pincode() {
   return {
     length: 4,
