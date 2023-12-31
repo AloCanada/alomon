@@ -1,31 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - Advanced PIN code input with Alpine.js</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>index 2 :･ﾟ✧</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jockey+One">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="flex flex-col w-full h-full">
-  <div x-data="links()"   class="flex flex-col w-68 h-60 bg-gray-100 text-gray-900 text-center justify-center items-center mx-auto rounded mt-2">
-      <p class="font-semibold">INSTAGRAM</p>
-      <button
-             class=" bg-white py-5 text-4xl 
-             unselectable font-bold rounded 
-             inline w-50 text-center 
-             select-none transition-all">
-  </div>
+    <!-- P I L T -->
+<div style="height: 100vh; width: 100vw;">
+    <div class="poster">
+        <img src="nublufilter.webp" alt="nublu" 
+            class="nublu" id="no-pixel">
+        <img src="nublu-pixelated.webp" alt="nublu-pixelated" 
+            class="nublu" id="pixel">
+<!--             <button onclick="changeClass()">Change class</button>
+        <button onclick="changeClassBack()">Change class Back</button> -->
+        <!-- <svg>
+            <filter id='noiseFilter'>
+                <feTurbulence 
+                    type='fractalNoise' 
+                    baseFrequency='0.6' 
+                    stitchTiles='stitch'/>
+                <feColorMatrix 
+                    in="colorNoise" 
+                    type="matrix" 
+                    values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+                <feComposite 
+                    operator="in" 
+                    in2="SourceGraphic" 
+                    result="monoNoise"/>
+                <feBlend 
+                    in="SourceGraphic" 
+                    in2="monoNoise" 
+                    mode="screen" />
+            </filter>
+        </svg> -->
+    </div>
+    
+    <!-- T E K S T -->
+    <div class="text-banner">
+        <h1 class="text">SINA KA MEID <br>ON KAKS</h1>
+        <p class="text">SA OLED KA <br>ÖÖLAPS</p>
+        <img id="dotline" class="text" src="dot line.svg" alt="dotline"/>
+        <a style="text-decoration: none;"  class="text" href="https://www.instagram.com/lennuki_endel/">MINU INSTAGRAM</a>
+    </div>
 </div>
-<!-- P I N   K O O D -->
-<div class="flex flex-col w-full h-full"> <!-- Koodi kast -->
-  <div x-data="pincode()" class="flex flex-col w-68 h-60 bg-gray-100 text-gray-900 text-center mx-auto rounded mt-2">
-    <p class="font-semibold">Enter PIN Code</p>
+    
+
+    <!-- P A S S W O R D -->
+<div style="display: flex; flex-direction: column; width: 100%; height: 100%;">
+    <br style="height: 3rem;">
+    <div class="flex flex-col w-full h-full">
+    <div x-data="pincode()" style="display: flex; flex-direction: column; width: 17rem; height: 15rem; background-color: #41ad75; color: #374151; text-align: center; margin-left: auto; margin-right: auto; border-radius: 0.375rem; margin-top: 0.5rem;">
+    <p style="font-weight: 600;">Enter PIN Code</p>
     <div>
       <template x-for="i in length">
         <input type="text" :name="'pin'+i" maxlength="1"
-               class="bg-white py-5 text-4xl unselectable font-bold rounded inline w-12 text-center select-none transition-all"
+               style="background-color: #ffffff; padding-top: 1.25rem; padding-bottom: 1.25rem; font-size: 2.25rem; 
+                font-weight: 700; display: inline; width: 3rem; text-align: center; user-select: none; transition: all 0.3s ease;"
+               class="unselectable"
                @paste.prevent="paste(event)"
                @keydown="type(event,i)"
                @keydown.ctrl.a.prevent
@@ -33,24 +73,27 @@
                @keydown.arrow-right.prevent="goto(i+1)"
                @keydown.arrow-left.prevent="goto(i-1)"
                :value="input[i-1]!=null?input[i-1]:0" 
-                :x-ref="'pin'+i" placeholder="0"
+               :x-ref="'pin'+i" placeholder="0"
                :disabled="input.length < i-1"
                :autofocus="i==1">
       </template>
       <div>
-        <p class="text-md font-bold  text-gray-500 h-5" id="feedback"></p>
-        <p class="text-sm text-center text-gray-500 w-60 mx-auto">password design by <a href="https://github.com/rehhouari" class="text-gray-900">@rehhouari</a><br>
-        <span class="text-xs mt-2 text-gray-500">Küsi alomonilt parooli</span>
+        <p style="font-size: 1.25rem; font-weight: 700; color: #6B7280; height: 1.25rem;" id="feedback"></p>
+        <p style="font-size: 0.875rem; text-align: center; color: #6B7280; width: 15rem; margin-left: auto; margin-right: auto;">
+          password design by <a href="https://github.com/rehhouari" style="color: #374151;">@rehhouari</a><br>
+          <span style="font-size: 0.75rem; margin-top: 0.5rem; color: #6B7280;">Küsi alomonilt parooli</span>
         </p>
-        
       </div>
     </div>  
   </div>
 </div>
-    
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js'></script>
-<script src='https://unpkg.com/windicss-runtime-dom'></script><script  src="./script.js"></script>
-
+</div>
+    <!-- F O O T E R -->
+<footer style="background-color: blue;">
+    <h1>footer</h1>
+</footer>
+    <!-- S C R I P T -->
+    <script src="script.js"></script>
 </body>
 </html>
+
