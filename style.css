@@ -61,6 +61,9 @@ body {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+img.text {
+  width: 350px;
+}
 
 .text {
   color: #F11B7E;

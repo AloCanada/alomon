@@ -1,4 +1,4 @@
-function checkAndChangeClass() {
+/* function checkAndChangeClass() {
   if (window.innerHeight > window.innerWidth) {
       // Call the changeClass function if the condition is true
       changeClass();
@@ -11,10 +11,10 @@ function checkAndChangeClass() {
 // Call the function initially
 checkAndChangeClass();
 
-
-/* if (window.innerHeight > window.innerWidth) {
+/* SEE RIDA JA``KA COMMENTIDA */
+if (window.innerHeight > window.innerWidth) {
   changeClass();
-} */
+}
 
 function changeClass() {
   var element = document.querySelector("#no-pixel");
@@ -24,7 +24,7 @@ function changeClassBack() {
   var element = document.querySelector("#no-pixel");
   element.classList.replace("nublu-crop", "nublu");
 }
-
+ */
 
 /* pin kooooood */
 
