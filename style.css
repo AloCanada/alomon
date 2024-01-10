@@ -1,3 +1,11 @@
+:root {
+  --text: #f11e80;
+  --background: #000000;
+  --primary: #19be68;
+  --secondary: #1e8f84;
+  --accent: #5358db;
+}
+
 body {
   margin: 0px;
   background-image: url(/index2/green.svg);
@@ -5,6 +13,7 @@ body {
 /*     cover: no-repeat; */
   width: 100vw;
   height: 100vh;
+
 }
 
 /* #noiseFilter {} */
