@@ -1,8 +1,8 @@
 body {
   margin: 0px;
   background-image: url(/index2/green.svg);
-/*     background-color: black;
-*//*     cover: no-repeat; */
+    background-color: black;
+/*     cover: no-repeat; */
   width: 100vw;
   height: 100vh;
 }
@@ -44,15 +44,19 @@ body {
   border-radius: 46px;
   object-position: 17% 17%; 
 }
-.nublu-crop {
-/*     float: right;
-*/    margin: 1.5rem;
-  height: calc(100vh - 3rem);
-  width: calc(100vw - 3rem);
-  object-fit: cover;
-  border-radius: 46px;
-  object-position: 17% 17%; 
+
+@media only screen and (orientation: portrait) {
+  .nublu {
+  /*     float: right;*/    
+    margin: 1.5rem;
+    height: calc(100vh - 3rem);
+    width: calc(100vw - 3rem);
+    object-fit: cover;
+    border-radius: 46px;
+    object-position: 17% 17%; 
 }
+}
+
 .text-banner {
   position: relative;
   display: flex;
@@ -62,6 +66,7 @@ body {
   padding-right: 1.5rem;
 }
 
+
 .text {
   color: #F11B7E;
   font-family: Jockey One; 
@@ -70,6 +75,15 @@ body {
   line-height: normal;
   letter-spacing: 3px;
   margin: auto 1rem;
+}
+img.text {
+  width: 350px;
+}
+h1.text {
+  font-size: 44px;
+  color: rgba(0, 27, 126, 0.00);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #F11B7E;
 }
 
 #dotline{
