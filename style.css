@@ -81,7 +81,7 @@ img.text {
 }
 h1.text {
   font-size: 44px;
-  color: rgba(o, 27, 126, 0.00);
+  color: rgba(0, 27, 126, 0.00);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #F11B7E;
 }
