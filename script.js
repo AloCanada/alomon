@@ -11,7 +11,7 @@
 // Call the function initially
 checkAndChangeClass();
 
-/* SEE RIDA JA``KA COMMENTIDA */
+/* SEE RIDA JA``KA COMMENTIDA *//* 
 if (window.innerHeight > window.innerWidth) {
   changeClass();
 }
@@ -23,8 +23,8 @@ function changeClass() {
 function changeClassBack() {
   var element = document.querySelector("#no-pixel");
   element.classList.replace("nublu-crop", "nublu");
-}
- */
+} */
+
 
 /* pin kooooood */
 
