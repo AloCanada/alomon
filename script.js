@@ -1,33 +1,3 @@
-/* function checkAndChangeClass() {
-  if (window.innerHeight > window.innerWidth) {
-      // Call the changeClass function if the condition is true
-      changeClass();
-  } else {
-      // Remove the class if the condition is not true
-      document.body.classList.remove('wide');
-  }
-}
-
-// Call the function initially
-checkAndChangeClass();
-
-/* SEE RIDA JA``KA COMMENTIDA *//* 
-if (window.innerHeight > window.innerWidth) {
-  changeClass();
-}
-
-function changeClass() {
-  var element = document.querySelector("#no-pixel");
-  element.classList.replace("nublu", "nublu-crop");
-}
-function changeClassBack() {
-  var element = document.querySelector("#no-pixel");
-  element.classList.replace("nublu-crop", "nublu");
-} */
-
-
-/* pin kooooood */
-
 function pincode() {
   return {
     length: 4,
@@ -88,8 +58,9 @@ function pincode() {
     },
     check() {
       if (this.input.join("") == this.correctPin) {
-        feedback.innerHTML = "Correct!";
-      } else {
+        feedback.innerHTML = '<a href="https://1466.eu/">secret link</a>';
+      } 
+      else {
         feedback.innerHTML = "Wrong password!";
       }
     }
