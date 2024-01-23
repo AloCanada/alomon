@@ -8,8 +8,8 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
- 
-<div class="flex flex-col w-full h-full"> <!-- Koodi kast -->
+ <!-- Koodi kast -->
+<div class="flex flex-col w-full h-full"> 
   <div x-data="pincode()" class="flex flex-col w-68 h-60 bg-gray-100 text-gray-900 text-center mx-auto rounded mt-2">
     <p class="font-semibold">Enter PIN Code</p>
     <div>
@@ -28,7 +28,7 @@
                :autofocus="i==1">
       </template>
       <div>
-        <p class="text-md font-bold  text-gray-500 h-5" id="feedback"></p>
+        <p class="text-md font-bold  text-gray-500 h-auto" id="feedback"></p>
         <p class="text-sm text-center text-gray-500 w-60 mx-auto">password design by <a href="https://github.com/rehhouari" class="text-gray-900">@rehhouari</a><br>
         <span class="text-xs mt-2 text-gray-500">Küsi alomonilt parooli</span>
         </p>
@@ -36,7 +36,8 @@
       </div>
     </div>  
   </div>
-</div>
+</div> 
+
     
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js'></script>
