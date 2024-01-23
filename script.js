@@ -58,8 +58,9 @@ function pincode() {
     },
     check() {
       if (this.input.join("") == this.correctPin) {
-        feedback.innerHTML = "<a herf='https://1466.eu/'>secret link</a>";
-      } else {
+        feedback.innerHTML = '<a href="https://1466.eu/">secret link</a>';
+      } 
+      else {
         feedback.innerHTML = "Wrong password!";
       }
     }

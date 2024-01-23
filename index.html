@@ -31,44 +31,56 @@
         <a style="text-decoration: none;"  class="text" href="https://youtube.com/@alolohmus5305?si=uUnO9UDpw0ZK_6mP">YOUTUBE</a>
     </div>
 </div>
-    
+
+<br style="background-color: black; height: 2000px;">
 
     <!-- P A S S W O R D -->
-<div style="display: flex; flex-direction: column; width: 100%;">
-    <br style="height: 3rem;">
-    <div class="flex flex-col w-full h-full">
-    <div x-data="pincode()" style="display: flex; flex-direction: column; width: 17rem; height: 15rem; 
-        background: linear-gradient(128deg, rgba(30,143,132,1) 0%, rgba(22,95,128,1) 58%, rgba(15,49,124,1) 87%, rgba(9,9,121,1) 100%);
-        color: #f11e80; text-align: center; margin-left: auto; margin-right: auto; border-radius: 0.375rem; margin-top: 0.5rem;">
-    <p style="font-weight: 600;">ENTER PIN CODE</p>
-    <div>
-      <template x-for="i in length">
-        <input type="text" :name="'pin'+i" maxlength="1"
-               style="background-color: #ffffff; padding-top: 1.25rem; padding-bottom: 1.25rem; font-size: 2.25rem; 
-                font-weight: 700; display: inline; width: 3rem; text-align: center; user-select: none; transition: all 0.3s ease;"
-               class="unselectable"
-               @paste.prevent="paste(event)"
-               @keydown="type(event,i)"
-               @keydown.ctrl.a.prevent
-               @mousemove.prevent.stop
-               @keydown.arrow-right.prevent="goto(i+1)"
-               @keydown.arrow-left.prevent="goto(i-1)"
-               :value="input[i-1]!=null?input[i-1]:0" 
-               :x-ref="'pin'+i" placeholder="0"
-               :disabled="input.length < i-1"
-               :autofocus="i==1">
-      </template>
+<div class="flex flex-col w-full">
+    <div x-data="pincode()" class="pin">
+      <p style="font-weight: 700; font-size: 1.25rem;">ENTER PIN CODE</p>
       <div>
-        <p style="font-size: 1.25rem; font-weight: 700; color: #6B7280; height: 1.25rem;" id="feedback"></p>
-        <p style="font-size: 0.875rem; text-align: center; color: #6B7280; width: 15rem; margin-left: auto; margin-right: auto;">
-          password design by <a href="https://github.com/rehhouari" style="color: #374151;">@rehhouari</a><br>
-          <span style="font-size: 0.75rem; margin-top: 0.5rem; color: #6B7280;">Küsi alomonilt parooli</span>
-        </p>
-      </div>
-    </div>  
-  </div>
+        <template x-for="i in length">
+          <input 
+              class="pin-input"
+              type="text" 
+              :name="'pin'+i" 
+              maxlength="1" 
+              class="unselectable"
+              @paste.prevent="paste(event)"
+              @keydown="type(event,i)"
+              @keydown.ctrl.a.prevent
+              @mousemove.prevent.stop
+              @keydown.arrow-right.prevent="goto(i+1)"
+              @keydown.arrow-left.prevent="goto(i-1)"
+              :value="input[i-1]!=null?input[i-1]:0" 
+              :x-ref="'pin'+i" placeholder="0"
+              :disabled="input.length < i-1"
+              :autofocus="i==1">
+        </template>
+  
+            <div>
+            <p class="pin-output" id="feedback"></p>
+            <p style="
+                font-size: 0.875rem; 
+                text-align: center; 
+                color: #6B7280; 
+                width: 15rem; 
+                margin-left: auto; 
+                margin-right: auto;">password design by 
+                <a href="https://github.com/rehhouari" style="color: #374151;">@rehhouari</a>
+                <br>
+                <span style="
+                    font-size: 0.75rem; 
+                    margin-top: 0.5rem; 
+                    color: #6B7280;">Küsi alomonilt parooli</span>
+            </p>
+            </div>
+        </div>  
+    </div>
 </div>
-</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js'></script>
+<script src='https://unpkg.com/windicss-runtime-dom'></script><script  src="./script.js"></script>  
 
 <br>
     <!-- F O O T E R -->
