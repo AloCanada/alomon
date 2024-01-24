@@ -13,6 +13,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     </head>
 <body>
+
+      
+
     <!-- P I L T -->
 <div style="height: 100vh; width: 100vw;">
     <div class="poster">
@@ -32,11 +35,29 @@
     </div>
 </div>
 
-<br style="background-color: black; height: 2000px;">
+
+    <!-- S V G -->
+<svg>
+    <filter id='noiseFilter'>
+        <feTurbulence 
+        type='fractalNoise' 
+        baseFrequency='0.6' 
+        stitchTiles='stitch'/>
+        <feColorMatrix in="colorNoise" type="matrix" values="
+        1 0 0 0 0 
+        0 1 0 0 0 
+        0 0 1 0 0 
+        0 0 0 1 0" />
+            <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
+            <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+    </filter>    
+</svg>
+
 
     <!-- P A S S W O R D -->
 <div class="flex flex-col w-full">
     <div x-data="pincode()" class="pin">
+    <span class="bubble-backround"></span>
       <p style="font-weight: 700; font-size: 1.25rem;">ENTER PIN CODE</p>
       <div>
         <template x-for="i in length">
