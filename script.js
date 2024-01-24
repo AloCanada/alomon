@@ -2,7 +2,7 @@ function pincode() {
   return {
     length: 4,
     input: [],
-    correctPin: "1234",
+    correctPin: "1466",
     // this will only check when inputing the last number
     // usefull if you're going to limit number of checks
     onlyCheckOnLastFieldInput: true,
