@@ -78,7 +78,7 @@ body::before {
 @media only screen and (hover: none) and (pointer: coarse){
   .nublu {
     margin: 1.5rem;
-    height: calc(100vh - 10rem);
+    height: calc(100vh - 3rem);
     width: calc(100vw - 3rem);
     object-fit: cover;
     border-radius: 46px;
