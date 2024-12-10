@@ -2,7 +2,7 @@ function pincode() {
   return {
     length: 4,
     input: [],
-    correctPin: "1466",
+    correctPin: "1466", /* CTF{1466} */
     // this will only check when inputing the last number
     // usefull if you're going to limit number of checks
     onlyCheckOnLastFieldInput: true,
@@ -66,3 +66,12 @@ function pincode() {
     }
   };
 }
+
+// Limit scroll to 80% of the page height
+const maxScroll = document.body.scrollHeight * 0.8;
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > maxScroll) {
+    window.scrollTo(0, maxScroll); // Force scroll back
+  }
+});

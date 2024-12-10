@@ -11,6 +11,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+        <script>
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        </script>    
     </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7DEH95F819"></script>
 <script>
@@ -19,16 +23,21 @@
   gtag('js', new Date());
 
   gtag('config', 'G-7DEH95F819');
-
 </script>
+
+<style>
+    .nublu {
+    height: calc(var(--vh, 1vh) * 100 - 3rem);
+}
+</style>
 <body>
 
       
 
     <!-- P I L T -->
-<div style="height: 100vh; width: 100vw;">
+<div style="height: calc(var(--vh, 1vh) * 100); width: 100vw;">
     <div class="poster">
-        <img src="nublufilter.webp" alt="nublu" 
+        <img src="nublu.webp" alt="nublu" 
             class="nublu" id="no-pixel">
         <img src="nublu-pixelated.webp" alt="nublu-pixelated" 
             class="nublu" id="pixel">
@@ -48,24 +57,7 @@
     </div>
 </div>
 
-
-    <!-- S V G -->
-<svg>
-    <filter id='noiseFilter'>
-        <feTurbulence 
-        type='fractalNoise' 
-        baseFrequency='0.4' 
-        stitchTiles='stitch'/>
-        <feColorMatrix in="colorNoise" type="matrix" values="
-        1 0 0 0 0 
-        0 1 0 0 0 
-        0 0 1 0 0 
-        0 0 0 1 0" />
-            <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
-            <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
-    </filter>    
-</svg>
-
+<br style="height: 200px;">
 
     <!-- P A S S W O R D -->
 <div class="flex flex-col w-full">
@@ -113,9 +105,6 @@
     </div>
 </div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js'></script>
-<script src='https://unpkg.com/windicss-runtime-dom'></script><script  src="./script.js"></script>  
-
 <br>
     <!-- F O O T E R -->
 <footer>
@@ -124,6 +113,27 @@
         <h1 class="text" id="text-glow">alomon prod</h1>
     </center>
 </footer>
+<svg>
+    <filter id='noiseFilter'>
+        <feTurbulence 
+        type='fractalNoise' 
+        baseFrequency='0.4' 
+        stitchTiles='stitch'/>
+        <feColorMatrix in="colorNoise" type="matrix" values="
+        1 0 0 0 0 
+        0 1 0 0 0 
+        0 0 1 0 0 
+        0 0 0 1 0" />
+            <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
+            <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+    </filter>    
+</svg>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js'></script>
+<script src='https://unpkg.com/windicss-runtime-dom'></script>
+<script  src="./script.js"></script>  
+
+
     <!-- S C R I P T -->
     <script src="script.js"></script>
 </body>
